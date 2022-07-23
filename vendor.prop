@@ -170,6 +170,11 @@ persist.vendor.qfp=true
 # FRP
 ro.frp.pst=/dev/block/persistent
 
+# SkiaGL
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+renderthread.skia.reduceopstasksplitting=true
+
 # Gatekeeper
 ro.hardware.gatekeeper=mdfpp
 
