@@ -99,7 +99,7 @@ while [ "${#}" -gt 0 ]; do
 done
 
 if [ -z "${SRC}" ]; then
-    SRC="adb"
+    SRC="/home/j0sh1x/stock/mount"
 fi
 
 if [ -z "${ONLY_TARGET}" ]; then

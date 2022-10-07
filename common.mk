@@ -186,7 +186,8 @@ PRODUCT_PACKAGES += \
     Snap \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.postproc@1.0 \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
+    libgrallocusage
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -215,7 +216,11 @@ PRODUCT_PACKAGES += \
     init.samsung.eif.rc \
     init.samsung.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    persistentLogging.rc
+
+    PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init/persistentLogging.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/persistentLogging.rc
 	
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -224,83 +229,34 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@2.0 \
-    android.hardware.graphics.mapper@2.1 \
-    android.hardware.graphics.mapper@3.0 \
-    android.hardware.graphics.mapper@4.0 \
+    gralloc.kona
+
+PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
+    vendor.qti.hardware.display.allocator-service
+
+PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.kona \
-    libdisplayconfig.qti \
+    memtrack.kona
+
+PRODUCT_PACKAGES += \
     libdisplayconfig.qti.vendor \
-    libgralloc.qti \
+    libdisplayconfig.system.qti \
     libqdMetaData \
-    libsdedrm \
-    libsdmcore \
-    libsdmutils \
+    libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    memtrack.kona \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.1 \
-    vendor.display.config@1.2 \
-    vendor.display.config@1.3 \
-    vendor.display.config@1.4 \
     vendor.display.config@1.5 \
-    vendor.display.config@1.6 \
-    vendor.display.config@1.7 \
-    vendor.display.config@1.8 \
-    vendor.display.config@1.9 \
-    vendor.display.config@1.10 \
-    vendor.display.config@1.11 \
-    vendor.display.config@1.12 \
-    vendor.display.config@1.13 \
-    vendor.display.config@1.14 \
-    vendor.display.config@1.15 \
-    vendor.display.config@1.0.vendor \
-    vendor.display.config@1.1.vendor \
-    vendor.display.config@1.2.vendor \
-    vendor.display.config@1.3.vendor \
-    vendor.display.config@1.4.vendor \
-    vendor.display.config@1.5.vendor \
-    vendor.display.config@1.6.vendor \
-    vendor.display.config@1.7.vendor \
-    vendor.display.config@1.8.vendor \
-    vendor.display.config@1.9.vendor \
-    vendor.display.config@1.10.vendor \
     vendor.display.config@1.11.vendor \
-    vendor.display.config@1.12.vendor \
-    vendor.display.config@1.13.vendor \
-    vendor.display.config@1.14.vendor \
-    vendor.display.config@1.15.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
-    vendor.qti.hardware.display.allocator@1.0 \
-    vendor.qti.hardware.display.allocator@1.0.vendor \
-    vendor.qti.hardware.display.allocator@3.0 \
-    vendor.qti.hardware.display.allocator@3.0.vendor \
-    vendor.qti.hardware.display.allocator@4.0:64 \
-    vendor.qti.hardware.display.allocator@4.0.vendor:64 \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer@1.0 \
-    vendor.qti.hardware.display.composer@1.0.vendor \
-    vendor.qti.hardware.display.composer@2.0 \
-    vendor.qti.hardware.display.composer@2.0.vendor \
-    vendor.qti.hardware.display.composer@3.0:64 \
-    vendor.qti.hardware.display.composer@3.0.vendor:64 \
-    vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.mapper@1.0 \
-    vendor.qti.hardware.display.mapper@1.0.vendor \
-    vendor.qti.hardware.display.mapper@1.1 \
     vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0 \
     vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0 \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0 \
     vendor.qti.hardware.display.mapper@4.0.vendor
+
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -320,6 +276,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+#Gatekeeprr
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -503,6 +463,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+
+    # VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
