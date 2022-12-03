@@ -118,7 +118,6 @@ PRODUCT_PACKAGES += \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
-    audio_amplifier.kona \
     liba2dpoffload \
     libaudiopreprocessing \
     libbatterylistener \
@@ -181,7 +180,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.common@1.0:32 \
     libcamera2ndk_vendor \
     libgui_vendor \
-    Snap \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.postproc@1.0 \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
@@ -214,8 +212,7 @@ PRODUCT_PACKAGES += \
     init.samsung.eif.rc \
     init.samsung.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    persistentLogging.rc
+    ueventd.qcom.rc
 
     PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init/persistentLogging.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/persistentLogging.rc \
@@ -255,7 +252,6 @@ PRODUCT_PACKAGES += \
     memtrack.kona
 
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti.vendor \
     libdisplayconfig.system.qti \
     libqdMetaData \
     libqdMetaData.system \
@@ -384,7 +380,6 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     init.qti.media.sh \
-    android.hardware.omx@1.0-service \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -415,8 +410,8 @@ PRODUCT_PACKAGES += \
 
 #Light
 # Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung
+#PRODUCT_PACKAGES += \
+#    android.hardware.light-service.samsung
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -425,8 +420,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     libxml2 \
     librilutils \
-    librmnetctl \
-    secril_config_svc
+    librmnetctl
+    #secril_config_svc
 
 
 # Radio
@@ -446,8 +441,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung/aidl/power-libperfmgr
 
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
+#PRODUCT_PACKAGES += \
+ #   vendor.lineage.touch@1.0-service.samsung
 
 
 # Update engine
@@ -461,7 +456,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.2-service-qti
+    android.hardware.usb@1.3-service-qti
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
