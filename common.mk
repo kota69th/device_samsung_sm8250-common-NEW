@@ -402,10 +402,9 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
-#Light
 # Lights
-#PRODUCT_PACKAGES += \
-#    android.hardware.light-service.samsung
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.samsung.sm8250
 
 # RIL
 PRODUCT_PACKAGES += \
