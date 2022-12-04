@@ -798,8 +798,6 @@ vendor/lib64/unnhal-acc-hvx.so
 vendor/etc/libnfc-sec-vendor.conf
 vendor/etc/nfc/sec_s3nrn4v_swreg.bin
 vendor/etc/nfc/sec_s3nrn4v_hwreg.bin
-vendor/etc/nfc/libnfc-nxp_RF.conf
-vendor/etc/libnfc-nxp.conf
 
 # Media
 vendor/etc/seccomp_policy/mediacodec.policy
@@ -1098,7 +1096,9 @@ vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/bin/sec_nvm
 vendor/bin/spdaemon
-vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/bin/StoreKeybox
 vendor/etc/init/init.spdaemon_wait_spunvm.rc
 
@@ -1109,9 +1109,6 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
 # Secure element
 -vendor/bin/hw/android.hardware.secure_element@1.0-service
--vendor/bin/hw/android.hardware.secure_element@1.0-service-gto
-vendor/etc/init/android.hardware.secure_element@1.0-service-gto-sku.rc
-vendor/etc/init/android.hardware.secure_element@1.0-service-sku.rc
 vendor/etc/libse-gto-hal.conf
 -vendor/lib/android.hardware.secure_element@1.0-impl-gto.so
 -vendor/lib64/android.hardware.secure_element@1.0-impl-gto.so
@@ -1165,12 +1162,20 @@ vendor/lib/libsubsystem_control.so
 vendor/lib64/libsubsystem_control.so
 
 # Thermal
+vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
+vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
 vendor/etc/thermal-engine.conf
 -vendor/lib/libthermalclient.so
 vendor/lib/vendor.samsung.hardware.thermal@1.0.so
 -vendor/lib64/libthermalclient.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib/libhypervintf.so
+vendor/lib64/libhypervintf.so
+vendor/lib/vendor.samsung.hardware.hyper-V2-ndk_platform.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk_platform.so
 
 # Time services
 -vendor/app/TimeService/TimeService.apk
