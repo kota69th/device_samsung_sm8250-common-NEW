@@ -1,4 +1,4 @@
-<manifest version="1.0" type="device" target-level="4">
+<manifest version="2.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -84,8 +84,10 @@
         <interface>
             <name>IGatekeeper</name>
             <instance>default</instance>
+            <instance>mdfpp</instance>
         </interface>
         <fqname>@1.0::IGatekeeper/default</fqname>
+        <fqname>@1.0::IGatekeeper/mdfpp</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gnss</name>
@@ -128,16 +130,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@4.0::IKeymasterDevice/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.light</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ILight</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::ILight/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -212,18 +204,6 @@
         </interface>
         <fqname>@1.2::INfc/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.power</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPower</name>
-            <instance>default</instance>
-            <instance>miscpower</instance>
-        </interface>
-        <fqname>@1.0::IPower/default</fqname>
-        <fqname>@1.0::IPower/miscpower</fqname>
-    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
@@ -253,15 +233,9 @@
         </interface>
         <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="hidl" override="true">
         <name>android.hardware.radio.deprecated</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOemHook</name>
-            <instance>slot1</instance>
-            <!--<instance>slot2</instance>-->
-        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.renderscript</name>
@@ -360,7 +334,7 @@
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
     </hal>
-    <hal format="hidl">
+    <!-- <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -376,7 +350,7 @@
             <name>ISunlightEnhancement</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal> -->
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
         <transport>hwbinder</transport>
