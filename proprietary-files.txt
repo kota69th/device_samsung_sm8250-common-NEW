@@ -1098,6 +1098,7 @@ vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/bin/sec_nvm
 vendor/bin/spdaemon
+vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/bin/StoreKeybox
 vendor/etc/init/init.spdaemon_wait_spunvm.rc
 
