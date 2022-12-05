@@ -228,14 +228,9 @@ PRODUCT_PACKAGES += \
     $(LOCAL_PATH)/rootdir/etc/init/camera.unihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camera.unihal.rc
 
     #Contexthub
-    PRODUCT_PACKAGES += \
-        android.hardware.contexthub@1.0-service \
-        android.hardware.contexthub@1.0-impl
-	
-# Component overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
-    $(LOCAL_PATH)/configs/component-overrides_qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides_qti.xml
+    #PRODUCT_PACKAGES += \
+    #    android.hardware.contexthub@1.0-service \
+    #    android.hardware.contexthub@1.0-impl
 
 # Display
 PRODUCT_PACKAGES += \
@@ -290,7 +285,7 @@ PRODUCT_COPY_FILES += \
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.samsung
-    
+
 #Gatekeeprr
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
