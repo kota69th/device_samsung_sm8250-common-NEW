@@ -31,7 +31,14 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-aosp
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    device/samsung/r8s/overlay/hardware/samsung/AdvancedDisplay
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+# AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+    AdvancedDisplay
 
 # AOSP Recovery
 TARGET_USES_AOSP_RECOVERY := true
@@ -280,6 +287,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.samsung
+    
 #Gatekeeprr
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
