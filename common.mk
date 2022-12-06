@@ -267,10 +267,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
-
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -375,7 +371,8 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag \
     vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64
+    vendor.nxp.nxpnfc@1.0:64 \
+    android.hardware.nfc@1.2-service.samsung
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -438,7 +435,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung/aidl/power-libperfmgr
+    hardware/samsung/aidl/power-libperfmgr \
+    hardware/samsung/
 
 # Touch
 #PRODUCT_PACKAGES += \
