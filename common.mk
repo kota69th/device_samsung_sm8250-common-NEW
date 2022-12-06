@@ -419,8 +419,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     libxml2 \
     librilutils \
-    librmnetctl
-    #secril_config_svc
+    librmnetctl \
+    secril_config_svc
 
 
 # Radio
@@ -429,8 +429,9 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor
+    android.frameworks.schedulerservice@1.0.vendor:64 \
+    android.hardware.contexthub@1.0.vendor:64 \
+    android.hardware.sensors-service.samsung-multihal.sm8250
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
