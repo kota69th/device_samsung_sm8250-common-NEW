@@ -53,6 +53,9 @@ on post-fs
     mkdir /efs/biometrics 0770 system system
     mkdir /efs/biometrics/meta 0770 system system
 
+#Reverse Wireless charging
+    chown system system /sys/class/power_supply/battery/wc_tx_en
+    chmod 0664 /sys/class/power_supply/battery/wc_tx_en
 
 # Cirrus Amp Calibration
     chown system audio /sys/class/cirrus/cirrus_cal/status
