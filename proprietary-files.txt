@@ -128,6 +128,8 @@ vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 vendor/lib64/libmulawdec.so
+vendor/lib/libgrallocusage.so
+vendor/lib64/libgrallocusage.so
 
 #SoundFX
 vendor/lib/soundfx/libasphere.so
@@ -488,7 +490,21 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
-#vendor/bin/loadalgo#Check
+vendor/bin/loadalgo
+vendor/etc/adreno_bb.bin
+
+# CNE
+vendor/lib64/libxml.so
+vendor/lib64/vendor.qti.data.slm@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
+vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
+vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
 
 # CVP
 vendor/lib/libcvp2.so
@@ -512,8 +528,11 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # DRM
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+vendor/bin/hw/android.hardware.drm@1.3-service.clearkey
+vendor/etc/init/android.hardware.drm@1.3-service.clearkey.rc
 vendor/lib/libcpion.so
 vendor/lib/libhdcpsrm.so
 vendor/lib/libminksocket.so
@@ -795,17 +814,8 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
--vendor/bin/hw/sec.android.hardware.nfc@1.2-service
-vendor/etc/vintf/manifest/sec.android.hardware.nfc@1.2-service.xml
 vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
-vendor/etc/init/sec.android.hardware.nfc@1.2-service.rc
 vendor/lib64/nfc_nci_sec.so
-vendor/lib/android.hardware.nfc@1.0.so | 3dbe50927dfd66441915597b0e1c836f10e49394
-vendor/lib/android.hardware.nfc@1.1.so | 27c15716a976224ebd0779a120e59bd03bc53ac5
-vendor/lib/android.hardware.nfc@1.2.so | 192280fb7d380a65c04384ea4650b2606b08d311
-vendor/lib64/android.hardware.nfc@1.0.so | 4ba0cc02e28b5c4b257403f3d6c14af34734f644
-vendor/lib64/android.hardware.nfc@1.1.so | 2ad03f1a21ae173c5a7827fffc33ecbd8be1a2c3
-vendor/lib64/android.hardware.nfc@1.2.so | 39f9a0b910882d31b6c294c72e66977b1ee1ac20
 vendor/lib64/libNfcProperties.so
 vendor/etc/libnfc-sec-vendor.conf
 vendor/etc/nfc/sec_s3nrn4v_swreg.bin
