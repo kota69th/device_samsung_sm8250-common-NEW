@@ -983,20 +983,12 @@ vendor/lib64/libqmiservices-sem-ext.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqsocket.so
 
-
-
-# RIL
-vendor/bin/hw/rild
-vendor/bin/adpl
-vendor/bin/netmgrd
-vendor/bin/ipacm-diag
-vendor/bin/tftp_server
-vendor/bin/rmt_storage
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
+
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/plmn_delta_usagsm.bin
@@ -1008,6 +1000,21 @@ vendor/etc/locale/plmn_delta_zh-rTW.bin
 vendor/etc/locale/plmn_delta_zh-rHK.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
+
+# RIL
+vendor/bin/hw/rild
+vendor/bin/adpl
+vendor/bin/netmgrd
+vendor/bin/ipacm-diag
+vendor/bin/tftp_server
+vendor/bin/rmt_storage
+vendor/lib/libnetmgr.so
+vendor/lib/libnetmgr_common.so
+vendor/lib64/libnlnetmgr.so
+vendor/lib64/libnetmgr.so
+vendor/lib64/libnetmgr_common.so
+
+
 vendor/etc/mtu-conf.xml
 vendor/etc/sec_config_oem
 vendor/etc/pdpcnt-conf.xml
@@ -1015,11 +1022,7 @@ vendor/lib64/libril_sem.so
 vendor/lib/libconfigdb.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libengmode_client.so
-vendor/lib/libnetmgr.so
-vendor/lib/libnetmgr_common.so
-vendor/lib64/libnlnetmgr.so
-vendor/lib64/libnetmgr.so
-vendor/lib64/libnetmgr_common.so
+
 vendor/lib/libqrtr.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libsec-ril.so
@@ -1114,13 +1117,31 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/bin/StoreKeybox
 vendor/etc/init/init.spdaemon_wait_spunvm.rc
 
+#mdm_helper
+vendor/bin/mdm_helper
+vendor/bin/mdm_helper_proxy
+vendor/lib64/libmdmimgload.so
+vendor/bin/ks
+
+#qrtr
+vendor/bin/qrtr-cfg
+vendor/bin/qrtr-lookup
+
+#shsusrd
+vendor/bin/shsusrd
+vendor/etc/init/shsusrd.rc
+
+#ipa
+vendor/etc/init/ipa_fws.rc
+
 
 # SecureMSM (GPQESE)
 vendor/lib/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
 # Secure element
--vendor/bin/hw/android.hardware.secure_element@1.0-service
+vendor/bin/hw/android.hardware.secure_element@1.0-service
+-vendor/etc/init/android.hardware.secure_element@1.0-service.rc
 vendor/etc/libse-gto-hal.conf
 -vendor/lib/android.hardware.secure_element@1.0-impl-gto.so
 -vendor/lib64/android.hardware.secure_element@1.0-impl-gto.so
@@ -1219,10 +1240,8 @@ vendor/lib/libmmrtpencoder_proprietary.so
 vendor/lib/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 
-# WiFi
+# WiFif
 vendor/bin/hw/macloader
-vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service
-vendor/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
@@ -1253,7 +1272,6 @@ vendor/lib64/vendor.qti.hardware.servicetracker@1.2.so
 vendor/bin/add.pb
 vendor/bin/athdiag
 vendor/bin/btcoex_cont_config
-vendor/bin/cass
 vendor/bin/checkpoint_gc
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
@@ -1279,8 +1297,6 @@ vendor/etc/hostapd/hostapd.accept
 vendor/etc/hostapd/hostapd.deny
 vendor/etc/hostapd/hostapd_default.conf
 vendor/etc/init/btcoex_cont_config.rc
-vendor/etc/init/cass.rc
-vendor/etc/init/init.vendor.onebinary.rc
 vendor/lib/libpa.so
 vendor/lib/libsnap_vndk.so
 vendor/lib/libstreamparser.so
@@ -1358,3 +1374,5 @@ vendor/lib/libhdcp1prov.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib/libhdcp2p2prov.so
 vendor/lib64/libhdcp2p2prov.so
+vendor/etc/snap_gpu_kernel_64.bin
+vendor/etc/sysconfig/vendor-apex-allowlist.xml
